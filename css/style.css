@@ -2,6 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Syne Mono', monospace;
+  font-size: 40px;
+  color: white;
+}
+body {
+  background-color: black;
+
 }
 
 .box {
@@ -9,4 +16,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.boxTwo {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  color: green;
+  font-size: 30px;
 }
