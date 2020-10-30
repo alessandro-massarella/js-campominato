@@ -35,14 +35,14 @@ document.getElementById("buttFacile").addEventListener("click", function() {
 
 
 // CON UN CICLO WHILE GENERO I NUMERI CASUALI NON RIPETUTI
-var i = 0;
-while (i < RANDOM_NUMB) {
+// var i = 0;
+console.log('random numb', RANDOM_NUMB)
+while (numbersArray.length < 16) {
   var numRandom = numeroRandom(MIN_LIMIT, MAX_LIMIT);
   if (!numbersArray.includes(numRandom));
       numbersArray.push(numRandom);
-  i++;
 }
-console.log('numeri', numbersArray);
+console.log('array:', numbersArray);
 
 // In seguito deve chiedere all'utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
 // L'utente non può inserire più volte lo stesso numero.
@@ -51,7 +51,7 @@ console.log('numeri', numbersArray);
 for (var i = 0; i < (MAX_LIMIT - RANDOM_NUMB); i++) {
       var numeroUser = parseInt(prompt('inserisci un numero tra ' + MIN_LIMIT + ' e ' + MAX_LIMIT));
       if (isNaN(numeroUser) || numeroUser < MIN_LIMIT || numeroUser > MAX_LIMIT) {
-        alert('inserisci un numero compreso tra' + MIN_LIMIT  + ' e ' + MAX_LIMIT);
+        alert('inserisci un numero compreso tra' + MIN_LIMIT  + ' e ' +  MAX_LIMIT);
       } else { if ((!numbersArray.includes(numeroUser)) ){
                 numbersArray.push(numeroUser);
               } else {
